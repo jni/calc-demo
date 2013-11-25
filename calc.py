@@ -1,6 +1,10 @@
 import sys
 
 if __name__ == '__main__':
-    nums = map(float, sys.argv[1:])
-    print(sum(nums))
+    cmd = sys.argv[1]
+    nums = map(float, sys.argv[2:])
+    if cmd == "add":
+        print(sum(nums))
+    elif cmd == "mult":
+        print(reduce(lambda a,b:a*b, nums))
 
